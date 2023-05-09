@@ -23,7 +23,11 @@ on:
 ```shell
 https://serverless-api-elog.vercel.app/api/github?user=xxx&repo=xxx&event_type=xxx&token=xxx
 ```
-- curl 发起Get或者Post请求
+- curl 发起Get/Post请求
+```shell
+curl --location --request POST 'https://serverless-api-elog.vercel.app/api/github?user=xxx&repo=xxx&event_type=xxx&token=xxx'
+```
+
 ```shell
 curl --location --request POST 'https://serverless-api-elog.vercel.app/api/github' \
 --data-raw '{
