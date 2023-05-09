@@ -15,3 +15,5 @@ run/
 package-lock.json
 .idea
 .vercel
+.npmrc
+pnpm-lock.yaml

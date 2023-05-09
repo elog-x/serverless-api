@@ -4,7 +4,7 @@ import axios from "axios";
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   let data = req.query
   if(req.method === "POST") {
-    data = req.body
+    data = req.query || req.body
   }
   try {
     const { user, repo, event_type, token } = data
@@ -21,6 +21,6 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     );
     return res.status(result.status).json({ message: result.data || 'Success!' })
   } catch (e) {
-    return res.status(e.response.status).json({ message: e.message })
+    return res.status(e.response?.status || 404).json({ message: e.message })
   }
 }
