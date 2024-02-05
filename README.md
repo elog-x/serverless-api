@@ -1,6 +1,7 @@
 # serverless-api
 本项目提供了一个调用Github Dispatches 接口
-基于Vercel + Serverless 部署
+基于Vercel + Serverless 部署  
+你也可以 Fork 此仓库部署到自己的 Vercel 上
 ## 参数说明
 - user: Github用户名
 - repo: Github仓库名
